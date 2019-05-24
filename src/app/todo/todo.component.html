@@ -1,3 +1,10 @@
-<p>
-  todo works!
-</p>
+<h1 class="header">Things to do:</h1>
+<div class="todo">
+  <ul>
+    <li *ngFor="let todo of todos">{{ todo.title }}</li>
+  </ul>
+</div>
+<div>
+  <input type="">
+  <button (click)="addTodo()">Add</button>
+</div>
