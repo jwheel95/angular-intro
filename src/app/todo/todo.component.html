@@ -16,3 +16,17 @@
     <button (click)="addTodo()">Add</button>
   </form>
 </div>
+
+<hr>
+
+<div class="trash">
+  <h2>Trash</h2>
+  <ul>
+    <ng-container *ngFor="let todo of todos">
+      <li *ngIf="todo.isDeleted">
+        {{ todo.title }}
+        <span (click)="toggleDeleted(todo)">Restore</span>
+      </li>
+    </ng-container>
+  </ul>
+</div>
