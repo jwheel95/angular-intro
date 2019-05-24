@@ -1,10 +1,18 @@
 <h1 class="header">Things to do:</h1>
+<h2>{{ newTodo.title }}</h2>
 <div class="todo">
   <ul>
-    <li *ngFor="let todo of todos">{{ todo.title }}</li>
+    <ng-container *ngFor="let todo of todos">
+        <li *ngIf="!todo.isDeleted"
+        [ngClass]="{ 'completed': todo.isCompleted }"
+        (click)="toggleCompleted(todo)">
+        {{ todo.title }}
+        <span (click)="toggleDeleted(todo)">Delete</span>
+       </li>
+    </ng-container>
   </ul>
-</div>
-<div>
-  <input type="">
-  <button (click)="addTodo()">Add</button>
+  <form (ngSubmit)="addTodo()">
+    <input type="text" [(ngModel)]="newTodo.title" name="title">
+    <button (click)="addTodo()">Add</button>
+  </form>
 </div>
