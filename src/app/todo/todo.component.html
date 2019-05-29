@@ -1,6 +1,6 @@
 <h1 class="header">Things to do:</h1>
 <h2>{{ newTodo.title }}</h2>
-<div class="todo">
+<div class="todos">
   <ul>
     <ng-container *ngFor="let todo of todos">
         <li *ngIf="!todo.isDeleted"
@@ -19,8 +19,9 @@
 
 <hr>
 
-<div class="trash">
+<div class="trash todos">
   <h2>Trash</h2>
+  <button (click)="emptyTodoTrash()">Empty</button>
   <ul>
     <ng-container *ngFor="let todo of todos">
       <li *ngIf="todo.isDeleted">
