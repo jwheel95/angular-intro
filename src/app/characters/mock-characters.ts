@@ -43,10 +43,10 @@ export const CHARACTERS: CharacterInterface[] = [
     },
     {
         id: 6, 
-        name: 'Sasuke', 
-        image: 'https://i.ytimg.com/vi/19s0vIeJthA/maxresdefault.jpg',
+        name: 'The Dreaded Schwa', 
+        image: 'https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555923469/shape/mentalfloss/schwa.png',
         type: 'Villian', 
-        abilities: ['Byakugan', 'Rinnegan'], 
-        description: 'Itachi\'s younger brother.'
+        abilities: ['Mysterious Spelling', 'Schwasting Spellers'], 
+        description: 'A, e, i, o, u, and sometimes y.'
     }
 ];
